@@ -1,22 +1,22 @@
-# 声明要求的 cmake 最低版本
+# cmake 최소 버전 명시
 cmake_minimum_required(VERSION 2.8)
 
-# 声明一个 cmake 工程
+# cmake 프로젝트 선언
 project(HelloSLAM)
 
-# 设置编译模式
+# 컴파일 모드 설정
 set(CMAKE_BUILD_TYPE "Debug")
 
-# 添加一个可执行程序
-# 语法：add_executable( 程序名 源代码文件 ）
+# 실행 파일 추가
+# 문법: add_executable(<프로그램 이름> <소스 파일 이름>)
 add_executable(helloSLAM helloSLAM.cpp)
 
-# 添加hello库
+# hello 라이브러리 추가
 add_library(hello libHelloSLAM.cpp)
-# 共享库
+# 공유 라이브러리
 add_library(hello_shared SHARED libHelloSLAM.cpp)
 
-# 添加可执行程序调用hello库中函数
+# hello 라이브러리의 함수를 호출하는 실행 파일을 추가
 add_executable(useHello useHello.cpp)
-# 将库文件链接到可执行程序上
+# 라이브러리 파일을 실행 파일에 연결
 target_link_libraries(useHello hello_shared)

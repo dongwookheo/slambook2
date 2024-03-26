@@ -1,7 +1,7 @@
-//这是一个库文件
+// Library
 #include <iostream>
-using namespace std;
 
 void printHello() {
+  using namespace std;
   cout << "Hello SLAM" << endl;
 }

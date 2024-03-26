@@ -1,7 +1,8 @@
+#include <cstdint>
 #include <iostream>
 using namespace std;
 
-int main(int argc, char **argv) {
+int32_t main(int32_t argc, int8_t **argv) {
   cout << "Hello SLAM!" << endl;
   return 0;
 }
